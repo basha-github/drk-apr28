@@ -43,12 +43,29 @@ const movies = [
 
 <thead>
     <tr>
-        <td>Title</td>
-        <td>Runtime</td>
-        <td>Year</td>
-        <td>Poster</td>
+        <th>Title</th>
+        <th>Runtime</th>
+        <th>Year</th>
+        <th>Poster</th>
     </tr>
 </thead>
+<tbody>
+{movies.map(
+    (movie)=>(
+        <div>
+<tr>
+            <td>{movie.Title}</td>
+            <td>{movie.Runtime}</td>
+            <td>{movie.Year}</td>
+            <td><img src={movie.Poster} /></td>
+        </tr>
+        <br/>
+        </div>
+        
+    )
+)}
+
+</tbody>
 
 </table>
 
